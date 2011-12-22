@@ -1,15 +1,15 @@
 #!/bin/bash
-if [ "$1" = "free" ]; then
-	echo 'Freeing hosts...'
+if [ "$1" = "end" ]; then
+	echo 'Ending focus time...'
 	sudo cp /etc/free_hosts /etc/hosts
 	echo '[Done]'
-elif [ "$1" = "block" ]; then
-	echo 'Blocking hosts...'
+elif [ "$1" = "start" ]; then
+	echo 'Starting focus time...'
 	sudo cp /etc/blocked_hosts /etc/hosts
 	echo '[Done]'
 else
-	echo "You can either free or block hosts"
+	echo "You can either start or finish focus time"
 	echo "Usage: "
-	echo "	\$switch_hosts free"
-	echo "	\$switch_hosts block"
+	echo "	\$focus_on_shit.sh start"
+	echo "	\$focus_on_shit.sh end"
 fi
