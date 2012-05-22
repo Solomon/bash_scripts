@@ -1,7 +1,7 @@
 #!/bin/bash
 
 availability () {
-  if whois "$1" | grep -q Registrant
+  if whois "$1" | grep -q "Expiration Date"
   then
     echo "$1 is taken"
   else
